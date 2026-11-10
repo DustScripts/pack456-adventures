@@ -1,6 +1,6 @@
 
 /* ============================================================
-   PACK 456 ADVENTURES - APP VERSION 1.4
+   PACK 456 ADVENTURES - APP VERSION 1.5
 
    Complete replacement for app.js.
    Compatible with existing data.js and all six den files.
@@ -315,7 +315,14 @@
         "adventure"
       );
 
-      card.appendChild(element("summary", name));
+      const typeLabel =
+        type === "required" ? "Required" :
+        type === "special" ? "Special Elective" :
+        "Elective";
+
+      card.appendChild(
+        element("summary", name + " (" + typeLabel + ")")
+      );
 
       const tagText =
         type === "special" ? "Special Elective" :
@@ -535,7 +542,7 @@
 
   function initialize() {
     console.log(
-      "[PACK456] App Version 1.4 starting..."
+      "[PACK456] App Version 1.5 starting..."
     );
 
     site.denNames.forEach(den => {
@@ -557,7 +564,7 @@
     render();
 
     console.log(
-      "[PACK456] App Version 1.4 ready."
+      "[PACK456] App Version 1.5 ready."
     );
   }
 
