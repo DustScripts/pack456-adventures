@@ -1,0 +1,276 @@
+
+/* ==========================================
+   PACK 456 ADVENTURES
+   Main Website Styles
+   ========================================== */
+
+:root {
+  --blue: #164b83;
+  --gold: #e5aa21;
+  --line: #d9e1ea;
+  --pale: #f4f7fb;
+  --ink: #263442;
+}
+
+/* GLOBAL */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--pale);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+/* HEADER */
+
+.site-header {
+  background: var(--blue);
+  color: white;
+  text-align: center;
+  padding: 28px 15px;
+  border-bottom: 5px solid var(--gold);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.site-header p {
+  margin: 6px;
+}
+
+/* MAIN CONTENT */
+
+main {
+  max-width: 1050px;
+  margin: auto;
+  padding: 18px;
+}
+
+/* PANELS */
+
+.panel,
+.adventure {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 17px;
+  margin-bottom: 14px;
+}
+
+/* NAVIGATION */
+
+.denbar,
+.filters,
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+/* BUTTONS */
+
+button {
+  background: white;
+  color: var(--blue);
+  border: 1px solid #b7c5d4;
+  border-radius: 7px;
+  padding: 10px 13px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #eaf1f8;
+}
+
+button.active {
+  background: var(--blue);
+  color: white;
+}
+
+/* SEARCH */
+
+input[type="search"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  font-size: 16px;
+}
+
+/* CHECKBOXES */
+
+input[type="checkbox"] {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  accent-color: var(--blue);
+}
+
+/* ADVENTURES */
+
+summary {
+  cursor: pointer;
+  color: var(--blue);
+  font-weight: bold;
+  font-size: 19px;
+}
+
+summary:hover {
+  text-decoration: underline;
+}
+
+/* TAGS */
+
+.tag {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 15px;
+  background: #eef2f6;
+  font-size: 12px;
+  margin: 10px 5px 6px 0;
+}
+
+.tag.special {
+  background: #fff1d6;
+}
+
+/* REQUIREMENT TASKS */
+
+.task {
+  border-top: 1px solid var(--line);
+  padding: 13px 0;
+}
+
+.task label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-weight: bold;
+}
+
+/* TEACHING HINTS */
+
+.hint {
+  margin: 8px 0 0 30px;
+  padding: 10px;
+  border-left: 3px solid var(--gold);
+  background: #fffdf6;
+}
+
+/* INFORMATION BOXES */
+
+.note {
+  background: #f1f6fb;
+  border-left: 3px solid var(--blue);
+  padding: 11px;
+  margin: 12px 0;
+}
+
+/* SMALL TEXT */
+
+.small {
+  font-size: 13px;
+  color: #596b7c;
+}
+
+/* LINKS */
+
+a {
+  color: var(--blue);
+}
+
+/* EMPTY SEARCH RESULTS */
+
+.empty {
+  text-align: center;
+  padding: 25px;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .site-header h1 {
+    font-size: 25px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .panel,
+  .adventure {
+    padding: 13px;
+  }
+
+  button {
+    padding: 10px;
+  }
+
+  .hint {
+    margin-left: 12px;
+  }
+
+}
+
+/* PRINTING */
+
+@media print {
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .site-header {
+    background: white;
+    color: black;
+    border-bottom: 2px solid black;
+  }
+
+  .controls,
+  .actions,
+  footer {
+    display: none !important;
+  }
+
+  main {
+    max-width: none;
+    padding: 0;
+  }
+
+  .panel,
+  .adventure {
+    border: 1px solid #aaa;
+    break-inside: avoid;
+  }
+
+  .hint,
+  .note {
+    background: white;
+    border-left: 2px solid black;
+  }
+
+  summary,
+  a {
+    color: black;
+  }
+
+}

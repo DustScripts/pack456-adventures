@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Cub Scout Pack 456 Adventure Checklists">
+
+    <title>Pack 456 | Cub Scout Adventures</title>
+
+    <!-- Website styling -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <h1>🏕️ Pack 456 Adventures</h1>
+        <p>Rocky Mount, Virginia</p>
+        <p>Learn • Explore • Achieve</p>
+    </header>
+
+    <main>
+
+        <!-- DEN SELECTION AND SEARCH -->
+        <section class="panel controls">
+
+            <h2>Choose Your Den</h2>
+
+            <nav id="dens" class="denbar" aria-label="Choose Cub Scout Den">
+            </nav>
+
+            <input type="search" id="search" placeholder="Search adventures or activities..."
+                aria-label="Search adventures">
+
+            <div class="filters" aria-label="Filter adventures">
+
+                <button type="button" data-filter="all" class="active">
+                    All
+                </button>
+
+                <button type="button" data-filter="required">
+                    Required
+                </button>
+
+                <button type="button" data-filter="elective">
+                    Electives
+                </button>
+
+                <button type="button" data-filter="special">
+                    Special Electives
+                </button>
+
+            </div>
+        </section>
+
+        <!-- DEN INFORMATION -->
+        <section class="panel">
+
+            <h2 id="heading">Bear Den Adventures</h2>
+
+            <p id="intro"></p>
+
+            <p id="count" class="small"></p>
+
+            <div class="actions">
+
+                <button type="button" id="print">
+                    Print Open Checklists
+                </button>
+
+                <button type="button" id="expand">
+                    Expand All
+                </button>
+
+                <button type="button" id="collapse">
+                    Collapse All
+                </button>
+
+                <button type="button" id="clear">
+                    Clear Checkmarks
+                </button>
+
+            </div>
+
+            <p class="small">
+                This public reference page collects no Scout
+                names or advancement records. Checkmarks
+                are temporary. Confirm official requirements
+                with your den leader.
+            </p>
+
+        </section>
+
+        <!-- ADVENTURES APPEAR HERE -->
+        <section id="results" aria-label="Adventure Checklists">
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Pack 456 Adventure Learning Library</p>
+        <p>
+            Unofficial Pack resource.
+            Scouting America requirements govern advancement.
+        </p>
+    </footer>
+
+    <!-- SHARED DATA -->
+    <script src="js/data.js" defer></script>
+
+    <!-- INDIVIDUAL DEN DATA -->
+    <script src="js/dens/lion.js" defer></script>
+    <script src="js/dens/tiger.js" defer></script>
+    <script src="js/dens/wolf.js" defer></script>
+    <script src="js/dens/bear.js" defer></script>
+    <script src="js/dens/webelos.js" defer></script>
+    <script src="js/dens/arrow-of-light.js" defer></script>
+
+    <!-- WEBSITE FUNCTIONALITY -->
+    <script src="js/app.js" defer></script>
+
+</body>
+
+</html>
